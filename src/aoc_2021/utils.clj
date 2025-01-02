@@ -21,6 +21,19 @@
 (defn parse-int [s]
   (Integer/parseInt s))
 
+(defn parse-bit  [s]
+  (Integer/parseInt s 2))
+
+(defn debug [s]
+  (let [value (cond
+                ;; (keyword? s) (name s)
+                (sequential? s) (str/join ", " (vec (doall s)))
+                :else (str "ddd" s))
+        output (str value)]
+    (println \newline)
+    (println output)
+    output))
+
 ;; Grid/Matrix helpers
 (defn create-grid
   "Create a 2D vector from string input where each char becomes an element"
