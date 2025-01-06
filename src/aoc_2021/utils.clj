@@ -18,6 +18,12 @@
        (map str/trim)
        (filter #(not (str/blank? %)))))
 
+(defn get-blocks
+  "Get blocks from string input by splitting on \n"
+  [input]
+  (as-> input $
+    (str/split $ #"\n\n")))
+
 (defn parse-int [s]
   (Integer/parseInt s))
 
@@ -26,9 +32,9 @@
 
 (defn debug [s]
   (let [value (cond
-                ;; (keyword? s) (name s)
+                (keyword? s) (name s)
                 (sequential? s) (str/join ", " (vec (doall s)))
-                :else (str "ddd" s))
+                :else (str s))
         output (str value)]
     (println \newline)
     (println output)
@@ -38,7 +44,9 @@
 (defn create-grid
   "Create a 2D vector from string input where each char becomes an element"
   [input]
-  (mapv vec (str/split-lines input)))
+  (->> input
+       (str/split-lines)
+       (mapv vec)))
 
 (defn grid-get
   "Get value from 2D grid at coordinates [x y]"
@@ -55,4 +63,11 @@
 ;; Tests for utilities
 (deftest utils-test
   (testing "manhattan-distance"
-    (is (= 6 (manhattan-distance [0 0] [2 4])))))
+    (is (= 6 (manhattan-distance [0 0] [2 4]))))
+
+  (testing "debug"
+    (is (= "7" (debug 7)))
+    (is (= "MyName" (debug :MyName)))
+    (is (= "{:a 7, :b 8}" (debug {:a 7 :b 8})))
+    (is (= "7, 4, 9, 5, 11, 17" (debug [7 4 9 5 11 17])))
+    (is (= "1, 2, 3, 4, 5, 6" (debug (range 1 7))))))
