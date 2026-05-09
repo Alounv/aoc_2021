@@ -58,7 +58,7 @@
 
 ;; Points helpers
 
-(defn get_max_from_points
+(defn get-max-from-points
   "Get max dimensions from a list of points"
   [points]
   (reduce (fn [[mx my] [x y]]
