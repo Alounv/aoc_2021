@@ -1,4 +1,5 @@
 ;; # 🎱 Day 4: Giant Squid
+;; https://adventofcode.com/2021/day/4
 (ns day-04
   (:require
    [aoc-2021.utils :refer [get-blocks get-lines read-input]]

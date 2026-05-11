@@ -1,5 +1,5 @@
 ;; # 🐟 Day 6: Lanternfish
-
+;; https://adventofcode.com/2021/day/6
 (ns day-06
   (:require
    [aoc-2021.utils :refer [parse-int read-input]]

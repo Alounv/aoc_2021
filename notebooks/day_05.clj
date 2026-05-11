@@ -1,4 +1,5 @@
 ;; # 🌋 Day 5: Hydrothermal Venture
+;; https://adventofcode.com/2021/day/5
 (ns day-05
   (:require
    [aoc-2021.utils :refer [get-lines parse-int read-input]]

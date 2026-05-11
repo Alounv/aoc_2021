@@ -1,4 +1,5 @@
 ;; # 🌊 Day 1: Sonar Sweep
+;; https://adventofcode.com/2021/day/1
 (ns day-01
   (:require
    [aoc-2021.utils :refer [read-input parse-int get-lines]]))

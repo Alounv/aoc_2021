@@ -1,4 +1,5 @@
 ;; # 💡 Day 3: Binary Diagnostic
+;; https://adventofcode.com/2021/day/3
 (ns day-03
   (:require
    [aoc-2021.utils :refer [get-lines parse-bit read-input]]

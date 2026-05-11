@@ -1,4 +1,5 @@
 ;; # 🚤 Day 2: Dive!
+;; https://adventofcode.com/2021/day/2
 (ns day-02
   (:require
    [aoc-2021.utils :refer [get-lines read-input]]
