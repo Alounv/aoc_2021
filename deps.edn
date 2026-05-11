@@ -9,10 +9,5 @@
 
   :build {:extra-paths ["notebooks"]
           :exec-fn nextjournal.clerk/build!
-          :exec-args {:paths ["notebooks/day_01.clj"
-                              "notebooks/day_02.clj"
-                              "notebooks/day_03.clj"
-                              "notebooks/day_04.clj"
-                              "notebooks/day_05.clj"
-                              "notebooks/utils.clj"]
+          :exec-args {:paths ["notebooks/*.clj"]
                       :out-path "public/build"}}}}
