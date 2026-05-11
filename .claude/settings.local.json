@@ -13,7 +13,11 @@
       "Bash(clj -A:dev -M -e \"\\(require 'day-01 'day-02\\) \\(println :both-loaded\\)\")",
       "Bash(clj -A:dev -M -e \"\\(require 'day-01 :reload 'day-02 :reload\\) \\(println :ok\\)\")",
       "Bash(clj -A:dev -M -e \"\\(require 'day-03\\) \\(println :ok\\)\")",
-      "Bash(clj -A:dev -M -e \"\\(require 'day-03 :reload\\) \\(println :ok\\)\")"
+      "Bash(clj -A:dev -M -e \"\\(require 'day-03 :reload\\) \\(println :ok\\)\")",
+      "Bash(clj -A:dev -M -e \"\\(require 'day-04\\) \\(println :ok\\)\")",
+      "Bash(clj -A:dev -M -e \"\\(require 'day-05\\) \\(println :ok\\)\")",
+      "Bash(clj -A:dev -M -e \"\\(require 'day-01 'day-02 'day-03 'day-04 'day-05\\) \\(println :all-loaded\\)\")",
+      "Bash(clj -A:dev -M -e \"\\(require 'utils 'day-01 'day-02 'day-03 'day-04 'day-05\\) \\(println :all-loaded\\)\")"
     ]
   }
 }

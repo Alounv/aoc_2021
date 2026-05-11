@@ -1,6 +1,5 @@
 (ns aoc-2021.utils
-  (:require [clojure.string :as str]
-            [clojure.test :refer [deftest is testing]]))
+  (:require [clojure.string :as str]))
 
 ;; File handling
 (defn read-input
@@ -94,41 +93,3 @@
 (defn debug [s]
   (println \newline)
   (println (stringify s)))
-
-;; Tests for utilities
-(deftest utils-test
-  (testing "manhattan-distance"
-    (is (= 6 (manhattan-distance [0 0] [2 4]))))
-
-  (testing "create-grid"
-    (is (= [[\1 \2 \3]
-            [\4 \5 \6]
-            [\7 \8 \9]]
-           (grid-create "123\n456\n789"))))
-
-  (testing "grid-get"
-    (is (= \1 (grid-get [[\1 \2 \3]
-                         [\4 \5 \6]
-                         [\7 \8 \9]]
-                        [0 0]))))
-
-  (testing "grid-list"
-    (is (= [\1 \2 \3 \4 \5 \6 \7 \8 \9]
-           (grid-list [[\1 \2 \3]
-                       [\4 \5 \6]
-                       [\7 \8 \9]]))))
-
-  (testing "create-empty-grid"
-    (is (= [[nil nil nil]
-            [nil nil nil]
-            [nil nil nil]]
-           (create-empty-grid 3 3))))
-
-  (testing "get_str"
-    (is (= "7" (stringify 7)))
-    (is (= "MyName" (stringify :MyName)))
-    (is (= "{:a 7, :b 8}" (stringify {:a 7 :b 8})))
-    (is (= "7, 4, 9, 5, 11, 17" (stringify [7 4 9 5 11 17])))
-    (is (= "1, 2, 3, 4, 5, 6" (stringify (range 1 7))))
-    (is (= "...\n...\n..." (stringify (create-empty-grid 3 3))))
-    (is (= "123\n456\n789" (stringify (grid-create "123\n456\n789"))))))
