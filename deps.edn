@@ -5,4 +5,14 @@
         org.slf4j/slf4j-nop {:mvn/version "1.7.36"}}
 
  :aliases
- {:dev {:extra-paths ["dev" "notebooks"]}}}
+ {:dev {:extra-paths ["dev" "notebooks"]}
+
+  :build {:extra-paths ["notebooks"]
+          :exec-fn nextjournal.clerk/build!
+          :exec-args {:paths ["notebooks/day_01.clj"
+                              "notebooks/day_02.clj"
+                              "notebooks/day_03.clj"
+                              "notebooks/day_04.clj"
+                              "notebooks/day_05.clj"
+                              "notebooks/utils.clj"]
+                      :out-path "public/build"}}}}
