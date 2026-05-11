@@ -19,7 +19,8 @@
       "Bash(clj -A:dev -M -e \"\\(require 'day-01 'day-02 'day-03 'day-04 'day-05\\) \\(println :all-loaded\\)\")",
       "Bash(clj -A:dev -M -e \"\\(require 'utils 'day-01 'day-02 'day-03 'day-04 'day-05\\) \\(println :all-loaded\\)\")",
       "Bash(clj -A:dev -M -e \"\\(require 'day-05 :reload\\) \\(println :ok\\)\")",
-      "Bash(clj -X:build)"
+      "Bash(clj -X:build)",
+      "Bash(clj -A:dev -M -e \"\\(require 'day-06\\) \\(println :ok\\)\")"
     ]
   }
 }
