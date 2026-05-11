@@ -5,7 +5,9 @@
       "Bash(clj -M -e \"\\(require '[aoc-2021.01 :as d1]\\) \\(println :part1 \\(d1/logic_1 d1/example\\)\\) \\(println :part2 \\(d1/logic_2 d1/example\\)\\) \\(println :parsed \\(d1/parse d1/example\\)\\) \\(println :count-incr-on-1-2-3-2-5 \\(d1/count-increases [1 2 3 2 5]\\)\\)\" -Sdeps '{:paths [\"src\" \"resources\"]}')",
       "WebSearch",
       "WebFetch(domain:github.com)",
-      "Bash(lein test *)"
+      "Bash(lein test *)",
+      "Bash(clj -M:test)",
+      "Bash(clj -A:dev -e \"\\(require 'user\\) \\(println :user-ns-loaded\\)\")"
     ]
   }
 }
